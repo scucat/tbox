@@ -1,0 +1,26 @@
+// index.vue
+<script lang='tsx'>
+// https://blog.csdn.net/qq_45032714/article/details/117399483
+import {defineComponent, onMounted} from 'vue'
+export default defineComponent({
+  props: {
+    msg: {
+      type: String,
+      default: ''
+    }
+  },
+  setup(props){
+    onMounted(()=>{
+      console.log(props.msg)
+
+    })
+    
+    return ()=>(
+      <div>
+      Hello { props.msg}
+      </div>
+    )
+  }
+})
+</script>
+
