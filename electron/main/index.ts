@@ -1,7 +1,12 @@
 import { app, BrowserWindow, shell, ipcMain } from 'electron'
 import { release } from 'node:os'
 import { join } from 'node:path'
+//const ElectronStore = require('electron-store');
+import ElectronStore from 'electron-store'
 
+// https://github.com/sindresorhus/electron-better-ipc/issues/43
+ElectronStore.initRenderer();
+console.log(app.getPath('userData'))
 // The built directory structure
 //
 // ├─┬ dist-electron
