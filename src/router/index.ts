@@ -6,6 +6,11 @@ const routes = [
         redirect: '/demo1'
     },
     {
+        path: '/calendar',
+        name: 'Calendar',
+        component: () => import(/* webpackChunkName: "add" */ '../components/Calendar/index')
+    },
+    {
         path: '/demo1',
         name: 'Demo1',
         component: () => import(/* webpackChunkName: "add" */ '../demo/demo1')
@@ -14,6 +19,11 @@ const routes = [
         path: '/demo2',
         name: 'Demo2',
         component: () => import(/* webpackChunkName: "add" */ '../demo/demo2.vue')
+    },
+    {
+        path: '/demo3',
+        name: 'Demo3',
+        component: () => import(/* webpackChunkName: "add" */ '../components/Editor/demo3.vue')
     },
     // {
     //   path: '/xview',

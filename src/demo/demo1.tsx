@@ -40,6 +40,8 @@ export default defineComponent({
     return () => (
       <div>
         <RouterLink to={'/demo2'}>demo2</RouterLink>
+        <br />
+        <RouterLink to={'/demo3'}>demo3</RouterLink>
         Hello demo1 {props.msg}
         <button onClick={handleClik}>clike me</button>
 
